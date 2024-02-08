@@ -6,8 +6,16 @@ export default {
     extend: {
       fontFamily: {
         "futura": ['Futura LT', 'sans-serif']
+      },
+      backgroundImage: {
+        'bg_img': "url('app/assets/bg_img.png')",
+      },
+      margin: {
+        auto: 'auto',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 } satisfies Config;

@@ -2,3 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  .scrollbar-rounded {
+    scrollbar-width: auto;
+    scrollbar-color: #9ca3af transparent;
+    transform: scaleX(-1);
+  }
+
+  /* Chrome, Edge, and Safari */
+  .scrollbar-rounded::-webkit-scrollbar {
+    width: 6px;
+    transform: scaleX(-1);
+  }
+
+  .scrollbar-rounded::-webkit-scrollbar-track {
+    background: transparent;
+    transform: scaleX(-1);
+  }
+
+  .scrollbar-rounded::-webkit-scrollbar-thumb {
+    background-color: #9ca3af;
+    border-radius: 3px;
+    border: 5px solid transparent;
+    transform: scaleX(-1);
+  }
+
+  .scrollbar-rounded > * {
+    transform: scaleX(-1);
+  }

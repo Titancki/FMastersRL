@@ -1,6 +1,26 @@
-/** @type {import('@remix-run/dev').AppConfig} */
+const { mountRoutes } = require('remix-mount-routes');
+
+const basePath = process.env.REMIX_BASEPATH ?? '';
+
 module.exports = {
-  cacheDirectory: "./node_modules/.cache/remix",
+  ignoredRouteFiles: ['.*'],
+  publicPath: `${basePath}/build/`,
+  assetsBuildDirectory: `public${basePath}/build`,
+  routes: defineRoutes => {
+    const baseRoutes = mountRoutes(basePath, 'routes');
+    const indexRoutes = defineRoutes(route => {
+      route('/', 'routes/home/_index.tsx')
+      route('/api/events', 'routes/api/events/_index.ts')
+      route('/dashboard', 'routes/dashboard/_index.tsx')
+      route('api/network', 'routes/api/network/_index.ts')
+      route('api/about', 'routes/api/about/_index.ts')
+    })
+    const routes = {
+      ...baseRoutes,
+      ...indexRoutes,
+    }
+    return routes
+  },
   future: {
     v2_dev: true,
     v2_errorBoundary: true,
@@ -9,7 +29,6 @@ module.exports = {
     v2_normalizeFormMethod: true,
     v2_routeConvention: true,
   },
-  ignoredRouteFiles: ["**/.*", "**/*.test.{js,jsx,ts,tsx}"],
   postcss: true,
   serverModuleFormat: "cjs",
   tailwind: true,

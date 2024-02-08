@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Event {
+  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
+  name_fr             String
+  name_en             String
+  url                 String
+  enabled             Boolean @default(true)
+  shown               Boolean @default(false)
+}
+
+model Network {
+  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
+  twitter_url         String
+  discord_url         String
+  youtube_url         String
+  tiktok_url          String
+  twitch_url          String
+  mail                String
+  show_youtube_id     String
+  show_twitter_id     String
+  all_events_url      String
+}
+
+model About {
+  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
+  name_fr             String
+  name_en             String
+  url                 String
+  enabled             Boolean @default(true)
+  shown               Boolean @default(false)
+}
+
+
+
