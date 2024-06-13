@@ -20,7 +20,7 @@ const discordStrategy = new DiscordStrategy(
   {
     clientID: "1067664592093847573",
     clientSecret: "xuWpdERlGWFOTK_SLcVzY_9VqM5Nz79I",
-    callbackURL: "http://25.48.25.85:3000/auth/discord/callback",
+    callbackURL: "http://localhost:3000/auth/discord/callback",
     // Provide all the scopes you want as an array
     scope: ["identify", "guilds", "guilds.members.read", "email", "guilds"],
   },

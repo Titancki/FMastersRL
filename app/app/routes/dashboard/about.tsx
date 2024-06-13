@@ -43,7 +43,7 @@ export const DashboardAbout: FC<{}> = ({}) => {
         try {
             const response = await fetch('/api/about');
             const aboutsResponse = await response.json();
-            const abouts: About[] = aboutsResponse.map((About: About) => ({
+            const abouts: About[] = aboutsResponse.map((About: About) => ({ 
               ...About
             }));
             setabouts(abouts);

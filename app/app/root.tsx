@@ -17,7 +17,6 @@ export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
-
 export default function App() {
   return (
     <html lang="en" className="h-full">
@@ -29,7 +28,9 @@ export default function App() {
         <Links />
         <link href="https://fonts.cdnfonts.com/css/futura-lt" rel="stylesheet"></link>
       </head>
-      <body className="h-full">
+      <body className="relative md:h-screen w-full"
+      style={{ backgroundImage: `url(${require("~/assets/bg_img.png")})`, backgroundSize: "cover" , backgroundAttachment: "fixed"}}>
+        
         <Outlet />
         <ScrollRestoration />
         <Scripts />
