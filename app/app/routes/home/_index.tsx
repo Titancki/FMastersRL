@@ -13,6 +13,7 @@ import HomeNetwork from "./network";
 import { Network } from "~/utils/network";
 import HomeTwitter from "./twitter";
 import winner from "~/assets/Homyno_Tsun.png"
+import vs from "~/assets/S.svg"
 
 export let loader: LoaderFunction = async ({ request }) => {
   return await auth.isAuthenticated(request);
@@ -69,8 +70,8 @@ export default function Index() {
         <div className="container mx-auto px-4 py-8 flex flex-wrap md:flex-nowrap space-y-8 md:space-y-0 md:space-x-8">
           
           {/* Gagnant Saison */}
-          <div className="relative w-full md:w-1/4 bg-slate-900 bg-opacity-50 p4 rounded-t-[20px]">
-            <div className="bg-slate-900 flex justify-center rounded-t-[20px]">
+          <div className="relative w-full md:w-1/4 bg-slate-900 bg-opacity-50 p4 rounded-t-[20px] rounded-b-[20px]">
+            <div className="bg-slate-900 flex justify-center rounded-t-[20px] h-10">
                 <h2 className="text-2xl font-bold mb-4">GAGNANT SAISON 1</h2>
             </div>
               <div className="flex flex-col items-center">
@@ -82,12 +83,12 @@ export default function Index() {
                 <p className="text-center">Thornirhim</p>
                 <p className="text-center">Thony</p>
               </div>
-            <div className="absolute bottom-0 bg-slate-900 rounded-b-[20px] h-6"></div>
+               <div className="absolute w-full inset-x-0 bottom-0 bg-slate-900 flex justify-center rounded-b-[20px] h-10"></div>
           </div>
           
           {/* Semaine 2 */}
           <div className="w-full md:w-2/4 bg-blue-700 p4 rounded-t-[20px]">
-            <div className="bg-slate-900 flex justify-between items-center rounded-t-[20px] p-2">
+            <div className="bg-slate-900 flex justify-between items-center rounded-t-[20px] p-2 h-10">
               <FontAwesomeIcon icon={faAngleLeft} className="h-6 w-6 cursor-pointer" />
               <h2 className="text-2xl font-bold ">Semaine 2</h2>
               <FontAwesomeIcon icon={faAngleRight} className="h-6 w-6 cursor-pointer" />
@@ -104,7 +105,7 @@ export default function Index() {
                         <div className="w-10 h-10 bg-blue-700 rounded-full"></div>
                         <div>Dignity Esports</div>
                       </div>
-                      <div className="text-lg font-bold">3 - 3</div>
+                      <div className="text-lg font-bold flex justify-between items-center">3 <img src={vs} alt="Logo" className="h-6 w-6 m-1" /> 3</div>
                       <div className="flex items-center space-x-4">
                         <div>Oserv eSport</div>
                         <div className="w-10 h-10 bg-blue-700 rounded-full"></div>
@@ -124,7 +125,7 @@ export default function Index() {
                         <div className="w-10 h-10 bg-blue-700 rounded-full"></div>
                         <div>Dignity Esports</div>
                       </div>
-                      <div className="text-lg font-bold">3 - 3</div>
+                      <div className="text-lg font-bold flex justify-between items-center">3 <img src={vs} alt="Logo" className="h-6 w-6 m-1" /> 3</div>
                       <div className="flex items-center space-x-4">
                         <div>Oserv eSport</div>
                         <div className="w-10 h-10 bg-blue-700 rounded-full"></div>
@@ -139,8 +140,8 @@ export default function Index() {
           </div>
 
           {/* Twitter Sidebar */}
-          <div className="w-full md:w-1/4 bg-slate-900 bg-opacity-50 p4 rounded-t-[20px]">
-            <div className="bg-slate-900 flex justify-center rounded-t-[20px]">
+          <div className="w-full md:w-1/4 bg-slate-900 bg-opacity-50 p4 rounded-t-[20px] rounded-b-[20px]">
+            <div className="bg-slate-900 flex justify-center rounded-t-[20px] h-10">
               <h2 className="text-2xl font-bold mb-4">TWITTER</h2>
             </div>
             <div className="w-full flex justify-center">
