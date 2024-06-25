@@ -149,9 +149,6 @@ export default function Index() {
             </div>
           </div>
         </div>
-
-        <HomeEvents selectedLanguage={selectedLanguage} all_event_url={network.all_events_url}/>
-        <HomeAbout selectedLanguage={selectedLanguage}/>
       </div>
     </main>
   );
