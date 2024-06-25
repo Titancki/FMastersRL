@@ -61,7 +61,7 @@ export const HomeNetwork: FC<{ selectedLanguage: string, changeLanguage: any, to
             <div className="flex items-center space-x-4">
               <div className="w-px h-4 bg-white mx-2"></div>
             </div>
-            <Link to="/about" className="ml-6 hover:underline">À Propos</Link>
+            <Link to="/propos" className="ml-6 hover:underline">À Propos</Link>
           </div>
           <div className="flex items-center space-x-4">
             <a href={network.twitch_url} target="_blank" rel="noopener noreferrer">
