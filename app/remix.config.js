@@ -14,6 +14,8 @@ module.exports = {
       route('/dashboard', 'routes/dashboard/_index.tsx')
       route('api/network', 'routes/api/network/_index.ts')
       route('api/about', 'routes/api/about/_index.ts')
+      route('/events', 'routes/home/events.tsx')
+      route('/propos', 'routes/home/propos.tsx')
     })
     const routes = {
       ...baseRoutes,

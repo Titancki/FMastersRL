@@ -66,3 +66,12 @@ model Team {
 model User {
   id String @id @default(auto()) @map("_id") @db.ObjectId
 }
+
+model Match {
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
+  equipe_1 String
+  equipe_2 String
+  score_1  Int
+  score_2  Int
+  date     DateTime
+}
